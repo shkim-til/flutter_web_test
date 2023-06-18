@@ -55,5 +55,30 @@
       });
     });
   </script>
+  
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-storage.js"></script>
+  <script src="main.dart.js" type="application/javascript"></script>
+  
+  <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/9.22.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyC54M5EVjDWU_wHANOgHPoCX90pRWN82io",
+      authDomain: "maclay-multi-store-881c1.firebaseapp.com",
+      projectId: "maclay-multi-store-881c1",
+      storageBucket: "maclay-multi-store-881c1.appspot.com",
+      messagingSenderId: "149343436771",
+      appId: "1:149343436771:web:226313d66308f7d4d46ad6"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
 </body>
 </html>

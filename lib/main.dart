@@ -1,6 +1,38 @@
-import 'package:flutter/material.dart';
+import 'dart:io';
 
-void main() {
+import 'package:flutter/foundation.dart';
+import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  bool kisweb;
+  FirebaseOptions? option;
+  try {
+    if (Platform.isAndroid || Platform.isIOS) {
+      kisweb = false;
+    } else {
+      kisweb = true;
+    }
+  } catch (e) {
+    kisweb = true;
+  }
+  if (kisweb) {
+    option = const FirebaseOptions(
+      apiKey: "AIzaSyC54M5EVjDWU_wHANOgHPoCX90pRWN82io",
+      authDomain: "maclay-multi-store-881c1.firebaseapp.com",
+      projectId: "maclay-multi-store-881c1",
+      storageBucket: "maclay-multi-store-881c1.appspot.com",
+      messagingSenderId: "149343436771",
+      appId: "1:149343436771:web:226313d66308f7d4d46ad6",
+    );
+  } else {
+    option = null;
+  }
+
+  await Firebase.initializeApp(
+    options: option,
+  );
   runApp(const MyApp());
 }
 
